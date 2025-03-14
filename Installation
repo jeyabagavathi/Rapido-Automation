@@ -2,7 +2,7 @@ Installation Steps
 
 1.Install Java and Set Up Environment Variables
 
-Download and install JDK 8 or higher.
+Download and install JDK 23 or higher.
 
 Set JAVA_HOME and add it to the system PATH.
 
