@@ -1,0 +1,51 @@
+package testingjeya;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.Select;
+
+public class RapidoPage {
+    private WebDriver driver;
+
+    public RapidoPage(WebDriver driver) {
+        this.driver = driver;
+    }
+
+    public void openRapidoContactPage() {
+        driver.get("https://www.rapido.bike/Contact");
+    }
+
+    public void fillContactForm(String name, String email, String mobile, String customerType, String queryType, String comment) throws InterruptedException {
+        driver.findElement(By.xpath("//input[@placeholder='Enter your name']")).sendKeys(name, Keys.TAB);
+        Thread.sleep(1500);
+
+        driver.findElement(By.xpath("//input[@placeholder='Enter your email']")).sendKeys(email, Keys.TAB);
+        Thread.sleep(1500);
+
+        driver.findElement(By.xpath("//input[@placeholder='Enter your mobile number']")).sendKeys(mobile, Keys.TAB, Keys.PAGE_DOWN);
+        Thread.sleep(1000);
+
+        Select customerDropdown = new Select(driver.findElement(By.xpath("//*[@id='__next']/html/div/section[2]/div/div/div/div[1]/div[5]/select")));
+        customerDropdown.selectByVisibleText(customerType);
+        Thread.sleep(1500);
+
+        Select queryDropdown = new Select(driver.findElement(By.xpath("//*[@id='__next']/html/div/section[2]/div/div/div/div[1]/div[6]/select")));
+        queryDropdown.selectByVisibleText(queryType);
+        Thread.sleep(1500);
+
+        driver.findElement(By.xpath("//textarea[@placeholder='Enter your comment']")).sendKeys(comment, Keys.ENTER);
+    }
+
+    public void submitForm() {
+        driver.findElement(By.xpath("//button[@class='btn yellow-btn']")).click();
+    }
+
+    public void completeSubmission() throws InterruptedException {
+        Thread.sleep(2000);
+        driver.findElement(By.xpath("/html")).sendKeys(Keys.PAGE_DOWN);
+        Thread.sleep(3000);
+        driver.findElement(By.xpath("//button[@class='thanks-text done-btn']")).click();
+    }
+}
