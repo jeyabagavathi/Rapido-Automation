@@ -1,0 +1,31 @@
+Installation Steps
+
+1.Install Java and Set Up Environment Variables
+
+Download and install JDK 8 or higher.
+
+Set JAVA_HOME and add it to the system PATH.
+
+2.Install Selenium WebDriver
+
+Download Selenium JAR files from the Selenium official website.
+
+Add the JAR files to the project’s classpath.
+
+3.Download ChromeDriver
+
+Download the compatible version from ChromeDriver official site.
+
+Place it inside the Driver folder in the project directory.
+
+4.Set Up the IDE
+
+Open the project in Eclipse or IntelliJ IDEA.
+
+Add the Selenium JAR files to the build path.
+
+5.Run the Script
+
+Open rappido.java.
+
+Run as a Java application.
