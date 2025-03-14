@@ -1,0 +1,24 @@
+package testingjeya;
+
+public class RapidoTest extends BaseTest {
+
+    public static void main(String[] args) throws InterruptedException {
+        RapidoTest test = new RapidoTest();
+        test.setUp();
+
+        RapidoPage rapidoPage = new RapidoPage(test.driver);
+        rapidoPage.openRapidoContactPage();
+        rapidoPage.fillContactForm(
+                "Bagavathi",
+                "bagavathi698@gjmail.com",
+                "8667226027",
+                "customer",
+                "Driver Appreciation",
+                "He has a good driver with a soft handler. He is genuine because he didn’t ask me for extra amount for the ride. Thank you."
+        );
+        rapidoPage.submitForm();
+        rapidoPage.completeSubmission();
+
+        test.tearDown();
+    }
+}
