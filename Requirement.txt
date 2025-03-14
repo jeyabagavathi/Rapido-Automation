@@ -1,0 +1,29 @@
+Requirements for Rapido Contact Form Automation
+
+System Requirements
+
+Operating System: Windows, macOS, or Linux
+
+Java Development Kit (JDK): Version 8 or higher
+
+Web Browser: Google Chrome (latest version recommended)
+
+ChromeDriver: Compatible with the installed Chrome version
+
+Integrated Development Environment (IDE): Eclipse, IntelliJ IDEA, or any Java-supported IDE
+
+Software Dependencies
+
+Selenium WebDriver (Latest version)
+
+Java Standard Edition (Java SE)
+
+Required Libraries
+
+Ensure the following JAR files are added to your project:
+
+selenium-java.jar
+
+selenium-chrome-driver.jar
+
+selenium-support.jar
