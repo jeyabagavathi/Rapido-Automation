@@ -1,0 +1,12 @@
+RapidoAutomation/
+│-- src/
+│   ├── testingjeya/
+│   │   ├── rappido.java
+│-- Driver/
+│   ├── chromedriver.exe
+│-- lib/
+│   ├── selenium-java.jar
+│   ├── selenium-chrome-driver.jar
+│   ├── selenium-support.jar
+│-- README.md
+│-- Requirements.md
